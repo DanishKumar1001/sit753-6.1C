@@ -74,8 +74,7 @@ pipeline {
   post {
     success {
         echo 'Notification: Build Successful. Email sent.'
-        emailext to: 'Danishkumar1001@gmail.com', subject: 'Build Successful', body: 'The build was successful. Logs attached.', attachmentsPattern: '**/*.log', attachLog: true,
-        mimeType: 'text/html', attachmentsPattern: 'a.txt'
+        emailext to: 'Danishkumar1001@gmail.com', subject: 'Build Successful', body: 'The build was successful. Logs attached.', attachmentsPattern: '**/*.log', attachLog: true
     }
     failure {
         echo 'Notification: Build Failed. Email sent.' 
